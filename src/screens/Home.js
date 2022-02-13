@@ -37,12 +37,12 @@ export default function Home() {
           setProgressBar(progressBar => progressBar + (100*0.5/challenge.max))
         }
         if (totalAmount === challenge.max) {
+          if (challengeNumber === 7) return
           setAmount(0)
           setProgressBar(0)
           setChallengeNumber(challengeNumber => challengeNumber + 1)
           setTotalAmount(0)
         }
-        if (totalAmount === challenge.max && challengeNumber === 7) return
       }
     }, 1000)
     return () => clearInterval(interval);
