@@ -3,15 +3,15 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 
 
 
-const StatusBar = ({amount}) => {
+const StatusBar = ({amount, progressBar}) => {
   return(
     <View style={{justifyContent: 'center', width: '100%', marginTop: 18}}>
-      <View style={{width: amount < 10 ? `${amount+18}%`: `${amount+8}%`}}>
-        <Text style={{textAlign: 'right', fontWeight: 'bold'}}>{`${amount}Wh`}</Text>
+      <View style={{width: '90%', paddingHorizontal:8}} >
+        <Text style={{position: 'absolute', top: -18, left:`${progressBar}%`, fontWeight: 'bold'}}>{`${amount}Wh`}</Text>
       </View>
       <View style={{flexDirection:"row", justifyContent:'space-between', alignItems: 'center'}}>
       <View style={styles.container}>
-        <View style={[styles.progressBar, amount && {width:`${amount}%`}]} />
+        <View style={[styles.progressBar, amount && {width:`${progressBar}%`}]} />
         <Image
           source={require('../assets/invalidName.png')}
           style={{ marginLeft: 8 }}

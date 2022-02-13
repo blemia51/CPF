@@ -20,14 +20,15 @@ function Navigation() {
           options={{
             title: '',
             headerStyle: {
-              backgroundColor: '#0c5266'
+              backgroundColor: '#0c5266',
+              height: 100,
             },
             headerLeft: () => <Counter />,
             headerRight: () => <Button size='sm' title='stop' color='#1e214e' backgroundColor="#d5e746" />,
             headerTintColor: '#1e214e',
             headerTitleStyle: {
               fontWeight: 'bold',
-              color: '#fff'
+              color: '#fff',
             },
           }}
         />

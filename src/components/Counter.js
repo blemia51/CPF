@@ -8,7 +8,7 @@ class Counter extends PureComponent {
     minutes: "00",
     seconds: "00",
     start: new Date(),
-    interval: () => {}
+    intervalId: () => {}
   };
 
   updateClock = () => {
@@ -56,14 +56,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     position: "absolute",
     left: 10,
-    bottom: 10,
+    bottom: 20,
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 5,
   },
   time: {
     color: "#fff",
-    fontSize: 20
+    fontSize: 18
   },
 })
 

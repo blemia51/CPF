@@ -1,39 +1,39 @@
 import React from  'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const Bar = () => {
-  return(
-    <View style={{backgroundColor:'red', height: 30, width:8, borderRaius: 20, margin: 2}} />
-  )
-}
-
-const blocks = new Array(3)
-console.log('blocks', blocks)
+import DashedBar from './DashedBar'
 
 const Resistance = () => {
   return(
-  <View style={styles.container}>
-    <Text>RESISTANCE</Text>
-       <View style={{flexDirection: 'row', margin: 4}}>
-        <Bar />
-        <Bar />
-        <Bar />
-        <Bar />
-        <Bar />
-        <Bar />
-       </View>
-  </View>
+    <View style={styles.container}>
+      <Text style={styles.title}>RESISTANCE</Text>
+      <DashedBar />
+      <Text 
+        style={{
+          color: '#fb836a',
+          position: 'absolute',
+          left: 170,
+          top: 64,
+          fontSize: 12,
+          fontWeight: 'bold'
+        }}>
+          6.1
+        </Text>
+    </View>
   )
 }
   
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    padding: 18,
-    marginTop: 30,
-    width: '100%'
+    paddingHorizontal: 18,
+    marginTop: 4,
+    width: '100%',
+    alignItems: 'flex-start'
+  },
+  title: {
+    color: 'lightgrey',
+    fontWeight: 'bold',
+  
   }
 })
 
